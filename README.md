@@ -27,41 +27,38 @@
 - Реализация агрегации: комната взаимодействует с отдельно созданным противником.
 - Демонстрация времени жизни объектов и автоматического уничтожения объектов.
 
+# Лабораторная работа № 3
+
+Проект расширен в ЛР 3:
+1. **Часть 1 (Java):** Перенос предметной области на язык с управляемой памятью (сборщик мусора, ссылки и копии, AutoCloseable, слабая ссылка WeakReference).
+2. **Часть 2 (C++):** Переход на современные умные указатели (`std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`) с полным исключением `new` и `delete`.
+
+---
+
+## Сборка и запуск из командной строки
+
+### Часть 1. Java
+
+Требуется установленный JDK (Java Development Kit 17+).
+
+javac -encoding UTF-8 -d out *.java
+java -cp out Main
+
+### Часть 2. C++
+
+g++ -std=c++17 -Wall -Wextra main.cpp enemy.cpp room.cpp level.cpp -o roguelike.exe
+.\roguelike.exe
+
 ## Структура проекта
 
 ```text
 Rogue-like-game/
-├── C#/
+├── Java/
 ├── C++/
 ├── .gitignore
 └── README.md
 ```
 
-Файлы лабораторной работы № 2 на C++:
-
-```text
-main.cpp
-enemy.hpp
-enemy.cpp
-room.hpp
-room.cpp
-level.hpp
-level.cpp
-```
-
-## Сборка и запуск
-
-Перейдите в папку с файлами лабораторной работы и выполните:
-
-```bash
-g++ main.cpp enemy.cpp room.cpp level.cpp -o roguelike.exe
-```
-
-Запуск в Git Bash:
-
-```bash
-./roguelike.exe
-```
 
 ## Автор
 
